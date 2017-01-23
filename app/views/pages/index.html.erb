@@ -7,15 +7,21 @@
 	</a>
 
 	<section class="signup-button">
-  		<button class="btn btn-lg btn-default btn-block" type="button">Sign In with Email</button>
+		<!-- To have button styles I did a link_to block with do -->
+		<%= link_to new_user_session_path do %>
+	  		<button class="btn btn-lg btn-default btn-block" type="button">Sign In with Email</button>
+	  	<% end %>
+
   	</section>
   		</br>	
 	<h4 class="signup-query">Don't have an account?</h4>
 	  
 	  <section class="signup-button">
+	  
 	  	<%= link_to new_user_registration_path do %>
 	  		<button class="btn btn-lg btn-default btn-block" type="button">Sign up</button>
 	  	<% end %>
+
 	  </section>
 	<br/>
 	<br/>

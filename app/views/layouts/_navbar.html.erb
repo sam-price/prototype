@@ -7,13 +7,14 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-
-			<a class="navbar-brand" href="#"><i class="fa fa-circle-o-notch"></i> Gymality</a>
+			<!-- Had to add GET or Javascript wouldn't load -->
+			<%= link_to '<i class="fa fa-circle-o-notch"></i> Gymality'.html_safe, root_path, class: 'navbar-brand', method: :get %>
+			
 		</div>
 
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">About <span class="sr-only">(current)</span></a></li>
+				<li><%= link_to 'About <span class="sr-only">(current)</span>'.html_safe, about_path %></li>
 				
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <span class="caret"></span></a>
@@ -70,3 +71,14 @@
 		</div>
 	</div>
 </nav>
+
+<!-- 
+References:
+
+Fancy Login form:
+http://bootsnipp.com/snippets/featured/fancy-navbar-login-sign-in-form
+
+NavBar:
+http://bootsnipp.com/snippets/featured/findcond-navbar
+
+ -->
