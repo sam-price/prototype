@@ -74,21 +74,21 @@ nav.navbar-custom span.badge.new {
 	color: #fff; 
 }
 
-#login-dp{
+#login-dp {
     min-width: 250px;
     padding: 14px 14px 0;
     overflow:hidden;
+    margin-top:4px;
 }
 #login-dp .help-block{
     font-size:12px    
 }
 #login-dp .bottom{
-    
     clear:both;
     padding:5px 0px 14px 0px;
 }
 #login-dp .social-buttons{
-    margin:12px 0    
+    margin:12px 0;    
 }
 #login-dp .social-buttons a{
     width: 49%;
