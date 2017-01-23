@@ -56,4 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Custom Gems
 gem "twitter-bootstrap-rails"
 gem 'simple_form'
+gem 'devise'
 
