@@ -1,3 +1,41 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home-information {
+	height: 300px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+}
+
+.bg-dark {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+}
+
+.slogan {
+	color: white;
+	font-family: 'Raleway', "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 1.2em;
+	padding: 10px 0 10px;
+	text-align: center;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+}
+
+p, ol, ul, td {
+	font-family: 'Varela Round', sans-serif;
+}

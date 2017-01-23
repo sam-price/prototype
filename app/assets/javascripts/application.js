@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.easing.min
+//= require supersized.3.2.7
 //= require turbolinks
 //= require_tree .
