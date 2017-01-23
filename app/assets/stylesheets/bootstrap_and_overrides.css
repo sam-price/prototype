@@ -8,3 +8,11 @@
 	
   *= require bootstrap-social
   */
+
+body {
+	font-family: 'Varela Round', sans-serif;
+}
+
+p, ol, ul, td {
+	font-family: 'Varela Round', sans-serif;
+}
