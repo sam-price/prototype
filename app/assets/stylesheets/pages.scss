@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .home-information {
 	height: 300px;
 	margin: auto;
@@ -31,3 +32,26 @@
 	padding: 10px 0 10px;
 	text-align: center;
 }
+.signup-query{
+	color:white;
+}
+
+.signup-button a {
+	text-decoration: none;
+}
+.signup-button button {
+  max-width: 265px;
+  margin: 10px auto;
+  font-size: 1.5rem; 
+  border: 1px solid transparent;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.signup-button button:hover {
+  background-color: #ffffff;
+  color: #f14444;  
+}
+

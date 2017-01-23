@@ -1,4 +1,4 @@
-<nav class="navbar navbar-custom navbar-fixed-top">
+<nav class="navbar navbar-custom navbar-static-top">
     <div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -22,7 +22,7 @@
 					<li>
 					 <div class="row">
 						<div class="col-md-12">
-							<p>Login via:</p>
+							<p>Login with:</p>
 							<div class="social-buttons">
 								<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
 								<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
@@ -44,8 +44,9 @@
 										
 								</form>
 						</div>
+
 							<div class="bottom text-center">
-								New here? <a href="#">Sign Up</a>
+								New here? <%= link_to 'Sign Up', new_user_registration_path %>
 							</div>
 					</div>
 					</li>
