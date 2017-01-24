@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  resources :users, only: [:show, :edit]
+  resources :users, only: [:show, :index]
 
   get 'about' => 'pages#about'
 
