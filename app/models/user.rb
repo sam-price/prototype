@@ -4,13 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  include Storext.model
+  include Preferences
 
-  store_attributes :settings do
-  	user_setup Boolean, default:false
-  	user_public Boolean, default:true
-  	exercise_frequency String
-  	exercise_tod String
-  	exercise_preference String
-  end
 end
