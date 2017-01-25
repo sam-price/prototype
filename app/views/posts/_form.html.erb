@@ -1,6 +1,7 @@
+<div class="col-md-6 col-md-offset-3">
 <%= simple_form_for(@post) do |f| %>
-<div class="panel panel-info">
-	<div class="panel-heading">Post</div>
+<div class="panel panel-info fixed-width">
+	<div class="panel-heading">Create a Post</div>
 	<div class="panel-body">
 		<%= f.error_notification %>
 		<%= f.input :content, required: true, label:false, placeholder: "New Post" %>

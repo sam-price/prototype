@@ -12,10 +12,12 @@
   <body>
   <!-- Rendering NavBar with Ruby code -->
   <%= render 'layouts/navbar' %>
+  
   <div class="container">
-  <%= flash.each do |name, msg| %>
+  <% flash.each do |name, msg| %>
     <%= msg %>
   <% end %>
+  
   </div>
 
   <div class="container">

@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   #include Preferences
 
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
 end

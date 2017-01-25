@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => {registrations: 'registrations'}
 
+  	authenticated :user do
+  		root to: "posts#index"
+	end
+
   root 'pages#index'
 
   resources :users, only: [:show, :index]

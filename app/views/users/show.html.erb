@@ -26,7 +26,7 @@
                         <%= gravatar_tag @user.email, size:125, :html => { :class => "img-circle img-responsive" } %>
                         <figcaption class="ratings">
                         <br>
-                            <p>Rating
+                            <p><strong>Activity:</strong>
                             <a href="#">
                                 <span class="fa fa-star"></span>
                             </a>
@@ -48,32 +48,47 @@
                 </div>
             </div>            
             <div class="col-xs-12 divider text-center">
-                <div class="col-xs-12 col-sm-4 emphasis">
-                    <h2><strong> 20,7K </strong></h2>                    
-                    <p><small>Followers</small></p>
-                    <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
+                <div class="col-xs-12 col-sm-4 emphasis"> 
+                    <h4><strong>Created</strong></h4>
+                    <p><small><%= time_ago_in_words(@user.created_at) %> ago</small></p>
+                    
+
+                    
+
                 </div>
                 <div class="col-xs-12 col-sm-4 emphasis">
-                    <h2><strong>245</strong></h2>                    
-                    <p><small>Following</small></p>
-                    <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>
+                    <h4><strong>Last Sign In</strong></h4>                    
+                    <p><small><%= time_ago_in_words(@user.current_sign_in_at) %> ago</small></p>
+                    
                 </div>
                 <div class="col-xs-12 col-sm-4 emphasis">
-                    <h2><strong>43</strong></h2>                    
-                    <p><small>Snippets</small></p>
+                    <h4><strong>Gyms</strong></h4>                    
+                    <p><small>1</small></p>
+
+
                     <div class="btn-group dropup btn-block">
                       <button type="button" class="btn btn-primary"><span class="fa fa-gear"></span> Options </button>
                       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                       </button>
+
                       <ul class="dropdown-menu text-left" role="menu">
-                        <li><a href="#"><span class="fa fa-envelope pull-right"></span> Send an email </a></li>
-                        <li><a href="#"><span class="fa fa-list pull-right"></span> Add or remove from a list  </a></li>
+                      <% if current_user %>
+                        <li><%= link_to '<span class="fa fa-list pull-right"></span> View Users'.html_safe, users_path %></li>
+                        <li class="divider"></li>
+                        <li><%= link_to '<span class="fa fa-user pull-right"></span> Edit Profile'.html_safe, edit_user_registration_path %></li>
+                        
+                      <% else %>
+
+                        <li><a href="#"><span class="fa fa-envelope pull-right"></span> Send a message </a></li>
+                        <li><a href="#"><span class="fa fa-list pull-right"></span> Add or remove  </a></li>
                         <li class="divider"></li>
                         <li><a href="#"><span class="fa fa-warning pull-right"></span>Report this user for spam</a></li>
                         <li class="divider"></li>
                         <li><a href="#" class="btn disabled" role="button"> Unfollow </a></li>
+
+                        <% end %>
                       </ul>
                     </div>
                 </div>
@@ -81,6 +96,8 @@
     	 </div>                 
 		</div>
 	</div>
+    <%= render "posts/form" %>
 </div>
 
-<%= render "posts/form" %>
+
+

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	before_action :authenticate_user!
 	before_action :set_post, only: [:edit, :update, :destroy]
 
 	def index
@@ -7,6 +8,10 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
+	end
+
+	def edit
+		@post = Post.find(params[:id])
 	end
 
 	def create
@@ -19,13 +24,11 @@ class PostsController < ApplicationController
 		end	
 	end
 
-	def edit
-	end
 
 	def update
-		if @post.update(post_params)
+		if @post.update(posts_params)
 			redirect_to posts_path
-
+			flash[:notice] = "Successfuly updated"
 		else
 		render 'update'
 		end
@@ -39,8 +42,9 @@ class PostsController < ApplicationController
 		@post.destroy
 	end
 
-	private
+	
 
+	private
 	def set_post
 		@post = Post.find(params[:id])
 	end
