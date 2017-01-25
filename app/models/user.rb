@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   #include Preferences
 
+  has_many :posts
+
 end

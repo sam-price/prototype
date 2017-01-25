@@ -1,0 +1,11 @@
+<h4>New Post</h4>
+<% if @post.errors.any? %>
+	<% @post.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+<% end %>
+
+<%= simple_form_for @post do |f| %>
+	<%= f.input :content %>
+	<%= f.button :submit %>
+<% end %>
