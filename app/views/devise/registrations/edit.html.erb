@@ -10,6 +10,8 @@
   
   <div class="col-md-4">
     <%= f.input :bio, required: false %>
+    <%= f.input :gym, required: false %>
+
     <%= f.input :exercise_frequency, required: false, label: 'How many times do you exercise a week?', placeholder: 'e.g. 3-5 days a week' %>
     <%= f.input :exercise_tod, required: false, label: 'When do you prefer to exercise?', placeholder: 'e.g. Mid-Afternoon' %>
     <%= f.input :exercise_type, required: false, label: 'What is your preffered sport', placeholder: 'e.g. Weights/Running' %>
@@ -25,6 +27,7 @@
 
   <div class="col-md-6 col-md-offset-3">
   <hr>
+  <%= f.input :public, required: false, as: :select, label: 'Make profile public?' %>
   <%= f.input :current_password, hint: "We need your current password to confirm any changes", required: true %>
     <%= f.button :submit, "Update", class: 'btn-block' %>
   <hr>

@@ -60,3 +60,4 @@ gem 'devise'
 
 
 gem 'gravatarify'
+gem 'auto_html'
