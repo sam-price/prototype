@@ -1,13 +1,59 @@
 <div class="jumbotron text-center">
+	
 	<h3>People</h3>
-	<div class="btn-group" role="group" aria-label="Default Button Groups">
-		<button type="button" class="btn btn-default">Everyone</button>
-		<button type="button" class="btn btn-default">My Gym</button>
+	
+
+	<div class="row">
+	<br>
+	<%= link_to "View My Gym's Feed", posts_path, class: 'btn btn-primary' %>
+	<%= link_to "New Post", new_post_path, class: 'btn btn-primary' %>
 	</div>
 </div>
 
 <div class="container">
+<h4>My Gym</h4>
+	
 	<div class="row">
-		<%= render @users %>
+
+	<% @users.each do |user| %>
+	<% if user.gym == current_user.gym %>
+		<div class="col-md-3">
+				<div class="thumbnail">
+				<br>
+					<%= link_to user_path(user.id) do %>
+						<%= gravatar_tag user.email, size: 150 %>
+					<% end %>		
+				<div class="caption text-center">
+				<hr>
+					<h3><%= link_to user.first_name, user %></h3>
+				</div>
+
+			</div>			
+		</div>
+	<% end %>
+	<% end %>
 	</div>
+
+	<h4>Everyone Else</h4>
+	
+	<div class="row">
+
+	<% @users.each do |user| %>
+	<% if user.gym != current_user.gym %>
+		<div class="col-md-3">
+				<div class="thumbnail">
+				<br>
+					<%= link_to user_path(user.id) do %>
+						<%= gravatar_tag user.email, size: 150 %>
+					<% end %>		
+				<div class="caption text-center">
+				<hr>
+					<h3><%= link_to user.first_name, user %></h3>
+				</div>
+
+			</div>			
+		</div>
+	<% end %>
+	<% end %>
+	</div>		
 </div>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {registrations: 'registrations'}
 
   	authenticated :user do
-  		root to: "posts#index"
+  		root to: "users#index"
 	end
 
   root 'pages#index'

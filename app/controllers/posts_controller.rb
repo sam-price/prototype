@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 		@post = current_user.posts.new(posts_params)
 		if @post.save
 			flash[:notice] = "Successfuly submitted"
-			redirect_to post_path(@post)
+			redirect_to posts_path
 		else 
 			render 'new'
 		end	

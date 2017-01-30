@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.alert {
+	position:absolute;
+	z-index: 1;
+	max-width:300px;
+}
+
 .home-information {
 	height: 300px;
 	margin: auto;
